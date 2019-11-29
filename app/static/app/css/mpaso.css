@@ -1,0 +1,63 @@
+.primary {
+    background-color: #155E63;
+}
+
+.secondary {
+    background-color: #76B39D;
+}
+
+.tertiary {
+    background-color: #F9F8EB;
+}
+
+.quarternary {
+    background-color: #EAE7E7;
+}
+
+.animated-card {
+    width: 300px;
+    height: 450px;
+    border: 2px solid red;
+    position: relative;
+    margin: 10px;
+}
+
+.animated-card>img {
+    filter: blur(0px);
+    position: absolute;
+    transition: filter 0.5s ease-out;
+}
+
+.sliding-card {
+    display: flex;
+    flex-direction: column;
+    height: 168.75px;
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    left: 0px;
+    top: 225px;
+    z-index: 5;
+    transition: top 0.3s linear, height 0.3s ease-out;
+}
+
+.always-visible {
+    flex: 1;
+    text-align: center;
+}
+
+.slides-up {
+    flex: 1;
+    text-align: center;
+    visibility: hidden;
+    transition: visibility 0.4s linear;
+}
+
+.pocket {
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    left: 0;
+    bottom: 0;
+}
