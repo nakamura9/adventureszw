@@ -1,0 +1,32 @@
+{% extends 'window.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="head">
+    <h1>BOOK OUR ADVENTURES</h1>
+</div>
+<hr>
+<div class="details">
+    <h1 class='center'>{{object.name}}</h1>
+    <h3 class='center'>{{object.duration}} hrs | See Price List</h3>
+    <center>
+        <button class='btn btn-primary '>Book Now</button>
+    </center>
+    <br>
+</div>
+<div class = 'adventure-content'>
+    <img src="{{object.image.url}}" alt="First slide">
+    <p class = 'center'>{{description}}</p>
+    <h2>Book Online</h2>
+</div>
+    <hr>
+
+    <div class = 'center'>
+        <p>{{object.name}}</p>
+        <p>{{object.duration}} hrs | See Price List</p>
+        <p>{{object.days}}</p>
+    </div>
+    <hr>
+    <button class='btn '>Book Now</button>
+{% endblock %}
