@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView,DetailView
+from app.models import Adventure
 import os
 
 class Home(TemplateView):
@@ -28,3 +29,7 @@ class Events(TemplateView):
 
 class Terms(TemplateView):
     template_name = os.path.join('app', 'terms.html')
+
+class AdventureDetail(DetailView):
+    model = Adventure
+    template_name = os.path.join('app', 'details.html')

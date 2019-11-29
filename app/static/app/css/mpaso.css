@@ -1,9 +1,10 @@
 .primary {
     background-color: #155E63;
+    color: #eeeeee;
 }
 
 .secondary {
-    background-color: #76B39D;
+    background-color: #6BA8A9;
 }
 
 .tertiary {
@@ -14,10 +15,17 @@
     background-color: #EAE7E7;
 }
 
+.adventure-rows {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
 .animated-card {
     width: 300px;
     height: 450px;
-    border: 2px solid red;
+    border: 2px solid #155E63;
     position: relative;
     margin: 10px;
 }
@@ -39,6 +47,7 @@
     top: 225px;
     z-index: 5;
     transition: top 0.3s linear, height 0.3s ease-out;
+    color: #eeeeee;
 }
 
 .always-visible {
@@ -60,4 +69,96 @@
     height: 25%;
     left: 0;
     bottom: 0;
+}
+
+.custom-carousel img {
+    width: 100%;
+    height: 400px;
+    max-height: 400px;
+}
+
+.center {
+    text-align: center;
+}
+
+.adventure-content {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.adventure-content img {
+    display: block;
+    max-width: 50%;
+    height: auto;
+    margin: 0px auto;
+}
+
+body {
+    background-color: #e5dfdf;
+}
+
+/* homepage border color from first to fourth */
+.first {
+    border-color: #FD5E53;
+    border-style: solid;
+    border-width: 5px;
+}
+
+.second {
+    border-color: rgb(25, 182, 25);
+    border-style: solid;
+    border-width: 5px;
+    min-height: 448px;
+}
+
+.third {
+    border-color:#FF4040;
+    border-style: solid;
+    border-width: 5px;
+}
+
+.fourth {
+    border-color:whitesmoke;
+    border-style: solid;
+    border-width: 5px;
+}
+
+/* activities align */
+
+.activities li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+.activities {
+    margin: 0px auto;
+    font-size: 2rem;
+}
+
+.footer-custom {
+    background-color: #1d4d4f;
+    color: #eeeeee;
+    
+}
+
+.footer-custom a {
+    color: #6ba8a9;
+    text-decoration:none;
+}
+
+.nav-custom {
+    background-color: #1d4d4f;
+    color: #eeeeee;
+}
+
+.nav-custom a {
+    background-color: #1d4d4f;
+    color: #eeeeee;
+}
+
+.adventure-text {
+    color: whitesmoke;
 }
