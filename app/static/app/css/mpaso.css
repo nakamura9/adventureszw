@@ -162,3 +162,129 @@ body {
 .adventure-text {
     color: whitesmoke;
 }
+
+.footer-form input, .footer-form button{
+    margin-top: 0.25rem
+}
+
+
+.eat-image {
+    width: 40vw;
+    height: 25vw;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+
+.eat-card {
+    position: relative;
+    margin: 20px;
+}
+
+.eat-text {
+    width: 25vw;
+    height: 20vw;
+    position: absolute;
+    top: 2.5vw;
+    left: 30vw;
+    z-index: 1;
+    background-color: #EAE7E7;
+    padding: 20px;
+    box-shadow: 5px 10px 15px;
+}
+
+.eat-image img{
+    width: 100%;
+    height: auto;
+
+}
+
+.hero-text {
+    font-size: 6rem;
+    font-weight: 200;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.shimmer {
+    background-color: #155E63;
+    color: #eee;
+    animation: glimmer 10s ease-in-out infinite;
+}
+
+@keyframes glimmer {
+    0%{
+        background-color:  #155E63;
+
+    }
+    50%{
+        background-color:  #6BA8A9;
+    }
+
+    100%{
+        background-color:  #155E63;
+    }
+}
+
+.relax-card {
+    height: 400px;
+    color: white;
+    text-align: center;
+    margin: 10px;
+}
+
+.relax-card div {
+    background-color: #155E63;
+    height: 100%;
+    vertical-align: middle;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+}
+
+.relax-card div:hover {
+    opacity: 1;
+}
+
+.relax-card h1{
+    font-size: 12rem;
+}
+
+#relax-1 {
+    background-image: url('/static/app/images/game.png');
+}
+
+#relax-2 {
+    background-image: url('/static/app/images/wine2.png');
+}
+
+#relax-3 {
+    background-image: url('/static/app/images/horsing2.png');
+}
+
+.simple-relax-card{
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 5px 10px 15px;
+
+}
+
+.simple-relax-card-text{
+    flex: 1;
+    padding: 2rem;
+    margin: 10px;
+    
+}
+
+.simple-relax-card-image{
+    flex: 1;
+}
+
+.simple-relax-card-image img{
+    width: 100%;
+    height: auto;
+}

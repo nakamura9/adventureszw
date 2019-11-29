@@ -1,4 +1,51 @@
 {% extends 'window.html' %}
-
+{% load static %}
 {% block content %}
+
+<div class="jumbotron shimmer">
+    <h1 class='hero-text'>"Count the memories not the calories."</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Eat</h1>
+            <hr class="my-2">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <div class='eat-card'>
+                <div class='eat-image'>
+                    <img src="{% static 'app/images/rice.png' %}" alt="">
+                </div>
+                <div class='eat-text'>
+                    <h3>Authentic local food</h3>
+                    <h5>A taste of Zimbabwe</h5>
+                    <hr>
+                    <p>Wednesday, Thursday</p>
+                    <p>4hrs </p>
+                    <button class="btn primary text-white">Book Now</button>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class='eat-card'>
+                <div class='eat-image'>
+                    <img src="{% static 'app/images/gango.png' %}" alt="">
+                </div>
+                <div class='eat-text'>
+                    <h3>It's a Gango!</h3>
+                    <h5>A tast of Zimbabwe</h5>
+                    <hr>
+                    <p>Wednesday, Thursday</p>
+                    <p>5hrs </p>
+                    <button class="btn primary text-white">Book Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-2"></div>
+
+    </div>
+</div>
 {% endblock content %}

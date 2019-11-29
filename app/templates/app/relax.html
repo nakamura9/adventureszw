@@ -1,0 +1,82 @@
+{% extends 'window.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <div id='relax-1' class='relax-card'>
+                <div>
+                    <h1>RE</h1>
+                    <p>"Refuel your heart</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div id="relax-2" class='relax-card'>
+                <div>
+                    <h1>LA</h1>
+                    <p>...and...</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div id="relax-3" class='relax-card'>
+                <div>
+                    <h1>X</h1>
+                    <p>adventure on."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="simple-relax-card">
+                <div class="simple-relax-card-image">
+                    <img src=" {% static 'app/images/thirsty.png' %} " alt="">
+                </div>
+                <div class="simple-relax-card-text">
+                    <h1>Umm, Thirsty</h1>
+                    <hr class="my-4">
+                    <p>Mon, Wed, Fri, Sat</p>
+                    <p>4hrs</p>
+                    <p>See price list</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="simple-relax-card">
+                <div class="simple-relax-card-image">
+                    <img src=" {% static 'app/images/elephant.png' %} " alt="">
+                </div>
+                <div class="simple-relax-card-text">
+                    <h1>Elephant Escapade</h1>
+                    <hr class="my-4">
+                    <p>Mon, Wed, Fri, Sat</p>
+                    <p>4hrs</p>
+                    <p>See price list</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="simple-relax-card">
+                <div class="simple-relax-card-image">
+                    <img src=" {% static 'app/images/horsing.png' %} " alt="">
+                </div>
+                <div class="simple-relax-card-text">
+                    <h1>Horsing Around</h1>
+                    <hr class="my-4">
+                    <p>Mon, Wed, Fri, Sat</p>
+                    <p>4hrs</p>
+                    <p>See price list</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
