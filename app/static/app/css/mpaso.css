@@ -250,18 +250,6 @@ body {
     font-size: 12rem;
 }
 
-#relax-1 {
-    background-image: url('/static/app/images/game.png');
-}
-
-#relax-2 {
-    background-image: url('/static/app/images/wine2.png');
-}
-
-#relax-3 {
-    background-image: url('/static/app/images/horsing2.png');
-}
-
 .simple-relax-card{
     display: flex;
     flex-direction: row;
