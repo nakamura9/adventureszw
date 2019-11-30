@@ -8,7 +8,9 @@ $(document).ready(function () {
                 'height': '337.5px'
             });
             $(this).find('.slides-up').css('visibility', 'visible');
-            $(this).find('img').css('filter', 'blur(5px)');
+            var img = $(this).find('img');
+            img.css('filter', 'blur(5px)');
+            img.css('transform', 'scale(2.5)');
         })
 
         //animate on exit
@@ -18,7 +20,10 @@ $(document).ready(function () {
                 'height': '168.75px'
             });
             $(this).find('.slides-up').css('visibility', 'hidden');
-            $(this).find('img').css('filter', 'blur(0px)');
+            var img =$(this).find('img');
+            img.css('filter', 'blur(0px)');
+            img.css('transform', 'scale(1)');
+
         })
     })
 
