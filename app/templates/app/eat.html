@@ -13,6 +13,26 @@
             <hr class="my-2">
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="img-circle-container">
+                <div class='hover-scroll' id="hover-scroll-l">
+                    <i class="fa fa-angle-left"></i>
+                </div>
+                <div class="scroll-area" id='scroll-area'>
+                    <div class='img-circle' style="background-image:url({% static 'app/images/sadza.png' %});"></div>
+                    <div class='img-circle' style="background-image:url({% static 'app/images/chibage.png' %});"></div>
+                    <div class='img-circle' style="background-image:url({% static 'app/images/zondo.png' %});"></div>
+                    <div class='img-circle' style="background-image:url({% static 'app/images/nyama.png' %});"></div>
+                    <div class='img-circle' style="background-image:url({% static 'app/images/gango.png' %});"></div>
+                    <div class='hover-scroll' id="hover-scroll-r">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="row">
         <div class="col-2"></div>
         <div class="col-8">
@@ -22,7 +42,7 @@
                 </div>
                 <div class='eat-text'>
                     <h3>Authentic local food</h3>
-                    <h5>A taste of Zimbabwe</h5>
+                    <h6>A taste of Zimbabwe</h6>
                     <hr>
                     <p>Wednesday, Thursday</p>
                     <p>4hrs </p>
@@ -36,7 +56,7 @@
                 </div>
                 <div class='eat-text'>
                     <h3>It's a Gango!</h3>
-                    <h5>A tast of Zimbabwe</h5>
+                    <h6>A taste of Zimbabwe</h6>
                     <hr>
                     <p>Wednesday, Thursday</p>
                     <p>5hrs </p>
@@ -48,4 +68,29 @@
 
     </div>
 </div>
+
+<script>
+    function scrollLeft(){
+        document.getElementById('scroll-area').scrollLeft -= 5;
+    }
+
+    function scrollRight(){
+        document.getElementById('scroll-area').scrollLeft += 5;
+    }
+
+    $(document).ready(function(){
+        var intervalID;
+        $('#hover-scroll-l').hover(function(){
+            intervalID = setInterval(scrollLeft, 100);
+        }, function(){
+            clearInterval(intervalID)
+        })
+        $('#hover-scroll-r').hover(function(){
+            intervalID = setInterval(scrollRight, 100);
+        }, function(){
+            clearInterval(intervalID)
+        })
+
+    })
+</script>
 {% endblock content %}
