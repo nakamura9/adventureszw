@@ -10,9 +10,9 @@
 
 <div  style='display:flex;flex-direction:row;justify-content:center;'>
 <ul class="activities">
-    <li><a>Eat</a></li>
-    <li><a>Play</a></li>
-    <li><a>Relax</a></li>
+    <li><a class = "text-white btn primary btn-lg" href="{% url 'app:eat' %}">Eat</a></li>
+    <li><a class = "text-white btn primary btn-lg" href="{% url 'app:play' %}">Play</a></li>
+    <li><a class = "text-white btn primary btn-lg" href="{% url 'app:relax' %}">Relax</a></li>
 </ul>
 
     <div>
@@ -72,28 +72,31 @@
                     </ol>
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
-                            <div class="testimonial"><span class="huge">"</span>
+                            <div class="testimonial"><i class="fas fa-quote-left fa-3x"></i>
                             <h2>A true adventure with the perfect strangers</h2>
-                            <span class="huge">"</span>
+                            <i class="fas fa-quote-right fa-3x move-right"></i>
+                            <br>
                                 <p><b>Lisa,</b> <i>China</i></p>
                             
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="testimonial">
-                                <span class="huge">"</span>
+                                <i class="fas fa-quote-left fa-3x"></i>
                                 <h2>Spent a week with adventuresZW. The food was exceptional, the hike tiring, but worth the view.</h2>
-                                <span class="huge">"</span>
+                                <i class="fas fa-quote-right fa-3x move-right"></i>
+                                <br>
                                 <p><b>Jade,</b> <i>Mauritius</i></p>
 
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="testimonial">
-                                <span class="huge">"</span> 
+                                <i class="fas fa-quote-left fa-3x"></i> 
                                 <h2>Accommodating and fun. Chose a few events from their calendar.</h2>
                                 
-                                <span class="huge">"</span>
+                                <i class="fas fa-quote-right fa-3x move-right"></i>
+                                <br>
                                 <p><b>Tristan,</b> <i>Australia</i></p>
                             </div>
                         </div>

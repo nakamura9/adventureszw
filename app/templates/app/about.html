@@ -3,16 +3,16 @@
 {% block content %}
 {% load static %}
 
+<div class="jumbotron jumbotron-fluid shadow gap">
 <div class="container">
-    <br>
     <div class="row">
         <div class="col-md-6 col-sm-12">
-            <div id="carouselId" class="carousel slide custom-carousel" data-ride="carousel">
+            <div id="carouselId" class="carousel slide custom-carousel " data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselId" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselId" data-slide-to="1"></li>
                 </ol>
-                <div class="carousel-inner" role="listbox">
+                <div class="carousel-inner" role="listbox rounded">
                     <div class="carousel-item active">
                         <img src="{% static 'app/images/mpaso.png' %}" alt="First slide">
                         <div class="text-grad">
@@ -36,20 +36,16 @@
                 </a>
             </div>
         </div>
-        <div class="col-md-6 col-sm-12">
-            <h1 style='border-bottom: 1px solid black;font-size:4rem;text-align:right;'>"GOOD <br> FRIENDS, <br> GREAT <br> ADVENTURES."</h1>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12 about-text">
+        <div class="col-md-6 col-sm-12 ">
+            <h1>"GOOD FRIENDS, GREAT ADVENTURES."</h1>
             <p>We are authentically Zim!</p>
             <p>At AdventuresZW, we strive to create memories with our clients. Founded in 2019, AdventuresZW is made of a community of intrepids who specialize in finding the best experiences at affordable rates. </p>
             <p>We rely on our industry experience and vendor knowledge to ensure your adventure surpasses your expectations.</p>
             <p>The sky’s the limit in terms of creating your Zimbabwean culture experience.Send us an email and lets create a one of a kind journey through Zimbabwe.</p>
-        
         </div>
-        
     </div>
 </div>
+</div>
+
 
 {% endblock content %}

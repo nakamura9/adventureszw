@@ -1,0 +1,23 @@
+{% extends 'window.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="jumbotron jumbotron-fluid shimmer">
+    <div class="container">
+        <h1 class="display-3">Book Our Adventure!</h1>
+    </div>
+</div>
+<div class="container">
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow">
+                <div class="card-body">
+                    {% crispy form %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

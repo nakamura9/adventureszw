@@ -12,5 +12,9 @@ urlpatterns = [
     path('eat/', views.Eat.as_view(), name='eat'),
     path('play/', views.Play.as_view(), name='play'),
     path('relax/', views.Relax.as_view(), name='relax'),
-    path('adventure/<int:pk>', views.AdventureDetail.as_view(), name='bookings'),
+    path('adventure/<int:pk>', views.AdventureDetail.as_view(), 
+        name='bookings'),
+    path('create-booking/<int:pk>', views.BookingCreate.as_view(),
+        name='create-booking')
+    ,
 ]

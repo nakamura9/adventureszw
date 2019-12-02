@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse
+
 
 # Create your models here.
 class Adventure(models.Model):
@@ -11,3 +13,19 @@ class Adventure(models.Model):
 
     def __str__(self):
         return self.name
+
+class Booking(models.Model):
+    name = models.CharField(max_length = 255)
+    date = models.DateField()
+    adventure = models.ForeignKey(Adventure, on_delete=models.CASCADE)
+    number_of_participants = models.IntegerField()
+
+    def get_absolute_url(self):
+        return reverse("app:booking-detail", kwargs={"pk": self.pk})
+
+class Event(models.Model):
+    date = models.DateField()
+    title = models.CharField(max_length = 255)
+    description = models.TextField(max_length=255)
+    image = models.ImageField()
+    
