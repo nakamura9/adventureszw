@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView,DetailView
-from app.models import Adventure
+from django.views.generic import TemplateView,DetailView,CreateView
+from app.models import Adventure,Booking,Event
+from app import forms
 import os
 
 class Home(TemplateView):
@@ -33,3 +34,20 @@ class Terms(TemplateView):
 class AdventureDetail(DetailView):
     model = Adventure
     template_name = os.path.join('app', 'details.html')
+
+class BookingCreate(CreateView):
+    template_name = os.path.join('app' , 'booking_create.html')
+    form_class = forms.BookingForm
+
+    def get_initial(self):
+        return {
+            "adventure":self.kwargs["pk"] 
+        }
+
+class BookingDetail(DetailView):
+    model = Booking
+    template_name = os.path.join('app', 'booking-details.html')
+
+class EventDetail(DetailView):
+    model = Event
+    template_name = os.path.join('app', "event-details.html")

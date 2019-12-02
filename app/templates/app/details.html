@@ -3,30 +3,32 @@
 
 
 {% block content %}
-<div class="head">
-    <h1>BOOK OUR ADVENTURES</h1>
-</div>
-<hr>
-<div class="details">
-    <h1 class='center'>{{object.name}}</h1>
-    <h3 class='center'>{{object.duration}} hrs | See Price List</h3>
-    <center>
-        <button class='btn btn-primary '>Book Now</button>
-    </center>
-    <br>
-</div>
-<div class = 'adventure-content'>
-    <img src="{{object.image.url}}" alt="First slide">
-    <p class = 'center'>{{description}}</p>
-    <h2>Book Online</h2>
-</div>
-    <hr>
 
-    <div class = 'center'>
-        <p>{{object.name}}</p>
-        <p>{{object.duration}} hrs | See Price List</p>
-        <p>{{object.days}}</p>
+<div class="jumbotron jumbotron-fluid shadow gap">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <div class="detail-image" style="background-image:url({{object.image.url}})">
+                
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-12">
+                <h1 class="display-3">{{object.name}}</h1>
+                <p class="lead">Book Our Adventure</p>
+                <hr class="my-2">
+                <p>More info</p>
+            <p class='center'>{{object.duration}} hrs | See Price List</p>
+            <p>Days available: {{object.days}}</p>
+                <p class="lead center">
+                    <p>
+                        {{object.description | linebreaks}}
+                    </p>
+
+                    <a class=' btn primary btn-lg text-white'href="{% url 'app:create-booking' pk=object.pk%}"> Book Now</a>
+                </p>
+            </div>
+        </div>
     </div>
-    <hr>
-    <button class='btn '>Book Now</button>
+</div>
+
 {% endblock %}
