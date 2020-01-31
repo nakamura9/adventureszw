@@ -504,3 +504,46 @@ main {
 .rounded {
     border-radius: 20px;
 }
+
+
+.participant-widget {
+    display: flex;
+    flex-direction: row;
+
+}
+
+#participant-count {
+    width: 50px;
+    height: 50px;
+    border-bottom: 2px solid #6ba8a9;
+    font-size: 2rem;
+    font-weight: 700;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.event-hero {
+    height: 70vh;
+    position: relative;
+}
+
+.event-hero img {
+    display: block;
+    height: 100%;
+    width: auto;
+    margin: 0px auto;
+}
+
+.event-hero > div {
+    position: absolute;
+    z-index: 100;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.25);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

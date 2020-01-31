@@ -1,0 +1,122 @@
+[{
+    "model": "app.adventure",
+    "pk": 1,
+    "fields": {
+        "duration": 5,
+        "image": "f4e8b5a2967c4bee927a7b4a0398ed09_bIDNqtv.webp",
+        "description": "Taste the most delicious and scrumptious food in a private dinner setting. Enjoy meals passed down from generation to generation. Focus will be on meals from the Shona and Ndebele tribes of Zimbabwe. Your private chef will explain the process of making the various dishes and the cultural significance.\r\n\r\nA few menu items to expect are\r\nAmacimbi - Madhora - Mopane worms\r\nIsibindi - Mapapu - Livers\r\nUlude - Nyeve - Spider flower\r\nMupunga nedovi - Rice with peanut butter\r\n\r\nFor the complete menu item please email your personal adventurer at mpaso@adventures.co.zw or nolwazi@adventures.co.zw\r\nBook Online",
+        "days": "Wed, Thu",
+        "name": "Authentic Local Food",
+        "price": 50.0
+    }
+}, {
+    "model": "app.adventure",
+    "pk": 2,
+    "fields": {
+        "duration": 5,
+        "image": "nocturnal_IV9CZuk.png",
+        "description": "If nightlife is something you enjoy, let us whisk you away on a 5-hour tour, led by fun-loving adventurers who know where to have a good time in Harare! Kick start the night with drinks under the stars and jive to the sounds of a local band.",
+        "days": "Fri, Sat",
+        "name": "Nocturnal Life",
+        "price": 60.0
+    }
+}, {
+    "model": "app.adventure",
+    "pk": 3,
+    "fields": {
+        "duration": 4,
+        "image": "mbare_nAeFLJP.png",
+        "description": "Formerly ''Harare'' The first high-density suburb, being established in 1907\r\n\r\nA hub of culture and creativity, Mbare boasts the largest indigenous textile and wholesale retailers. Let us venture through Mbare Musika (fresh food, craft and curio markets) Mupedzanhamo (translated end poverty) Rufaro stadium (home to Dynamos Football Club) Matapi flats well known for their dilapidated state with eye catching murals. The Matapi community will immerse you with their rich music creativity and art.",
+        "days": "Wed, Thu",
+        "name": "Mbare Township",
+        "price": 40.0
+    }
+}, {
+    "model": "app.adventure",
+    "pk": 4,
+    "fields": {
+        "duration": 5,
+        "image": "ngomakurira_GnnUig9.png",
+        "description": "Ngomakurira is known to many Harare residents as an area of intense beauty and great spiritual significance. A strenuous hike through massive granite outcrops interspersed with indigenous Miombo forest.\r\nKeep a look out for Klipspringer buck, rock rabbits, colourful lizards and the San rock art.",
+        "days": "Monday",
+        "name": "Ngomakurira Hike",
+        "price": 70.0
+    }
+}, {
+    "model": "app.adventure",
+    "pk": 5,
+    "fields": {
+        "duration": 4,
+        "image": "epworth_vje71go.png",
+        "description": "Extraordinary shaped rocks, seamlessly balancing on nothing. Enjoy the Zimbabwean sunset with locally crafted snacks and beverages.",
+        "days": "Mon, Wed",
+        "name": "Epworth",
+        "price": 55.0
+    }
+}, {
+    "model": "app.adventure",
+    "pk": 6,
+    "fields": {
+        "duration": 5,
+        "image": "craft_bF04YsW.png",
+        "description": "A trek around Harare's handmade gems. Expect to find one of a kind african print materials, clothing and accessories. Carefully crafted sculptures of the big 5 and unique jewelery. Our adventures will take you to 3 different locations to meet all your shopping needs.",
+        "days": "Mon, Wed, Thu, Fri, Sat",
+        "name": "Craft And Curio Markets",
+        "price": 65.0
+    }
+}, {
+    "model": "app.adventure",
+    "pk": 7,
+    "fields": {
+        "duration": 5,
+        "image": "domboshava_AkAUcLq.png",
+        "description": "Domboshava is a village located in the granite hills of northern Harare. The name is derived from dombo meaning \"rock\" and shava (pronounced shawa) meaning \"light brown\".\r\n\r\nAt the base of the granite rocks expect to see ancient paintings scattered across the rock surfaces once atop enjoy the 360 degree view of the historic Dombashava village.",
+        "days": "Mon, Wed, Thu, Fri, Sat",
+        "name": "Domboshava caves",
+        "price": 45.0
+    }
+}, {
+    "model": "app.adventure",
+    "pk": 8,
+    "fields": {
+        "duration": 4,
+        "image": "gango_9XoasUT.png",
+        "description": "Experience the mouth watering flavours of assorted meats astoundingly balanced with local fresh veg, a pot of sadza and a cold local brew.",
+        "days": "Wed, Thu",
+        "name": "It's A Gango",
+        "price": 50.0
+    }
+}, {
+    "model": "app.adventure",
+    "pk": 9,
+    "fields": {
+        "duration": 8,
+        "image": "thirsty_kSEk5s0.png",
+        "description": "Dive into the art of wine making, drinking and grape growing. Start your day with a tour of the vineyards, followed by a three course lunch with a magnificent views. End your escape with a cave walk or canoe on one of the picturesque lakes.",
+        "days": "Mon, Wed, Fri, Sat",
+        "name": "Ummm Thirsty",
+        "price": 80.0
+    }
+}, {
+    "model": "app.adventure",
+    "pk": 10,
+    "fields": {
+        "duration": 4,
+        "image": "elephant_DT3SFCN.png",
+        "description": "Walk hand in trunk with Africa's gentle giants.Understand the height at which an elephant stands and experience their environment from an elephant's perspective.",
+        "days": "Mon, Wed, Thu, Fri, Sat",
+        "name": "Elephant Escapade",
+        "price": 70.0
+    }
+}, {
+    "model": "app.adventure",
+    "pk": 11,
+    "fields": {
+        "duration": 3,
+        "image": "horsing_UbTg84E.png",
+        "description": "There is no better way to take in the sights and sounds of the bush. Explore the flaura and fauna.",
+        "days": "Mon, Wed, Thu, Fri, Sat",
+        "name": "Horsing Around",
+        "price": 75.0
+    }
+}]
