@@ -308,6 +308,13 @@ body {
     background-color: #155E63;
     color: #eee;
     animation: glimmer 10s ease-in-out infinite;
+    background-image: url('/static/app/images/pattern.png');
+    background-repeat: repeat;
+}
+
+.shimmer h1 {
+    background-color: #155E63;
+    display: inline-block;
 }
 
 @keyframes glimmer {

@@ -25,13 +25,27 @@ class Booking(models.Model):
     email = models.EmailField()
     date = models.DateField()
 
+    def total(self):
+        return sum([i.subtotal for i in self.bookingline_set.all()])
+
+    def get_absolute_url(self):
+        return reverse("app:booking-detail", kwargs={"pk": self.pk})
+
 class BookingLine(models.Model):
     booking = models.ForeignKey('app.booking', on_delete=models.CASCADE)
     adventure = models.ForeignKey(Adventure, on_delete=models.CASCADE)
     number_of_participants = models.IntegerField()
 
-    def get_absolute_url(self):
-        return reverse("app:booking-detail", kwargs={"pk": self.pk})
+    @property
+    def subtotal(self):
+        pricing = PriceSchedule.objects.get(adventure=self.adventure, 
+            participants=self.number_of_participants)
+
+        return pricing.price
+
+
+
+    
 
 class Event(models.Model):
     date = models.DateField()

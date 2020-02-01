@@ -61,7 +61,7 @@ class  MiniCalendar extends Component{
                             {week.map((day, j) =>(
                                 <td key={j} style={{padding:'3px'}}>
                                     <a key={i.toString() + '-' + j.toString()}
-                                        href={`/calendar/day/${day.date.getFullYear()}/${day.date.getMonth()+1}/${day.day}`}
+                                        href=""
                                         style={{
                                             textDecoration: "none",
                                         color: (i==0 && day.day > 7) || (i > 3 && day.day < 10)

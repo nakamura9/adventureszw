@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import TemplateView,DetailView,CreateView
-from app.models import Adventure,Booking,Event, PriceSchedule
+from app.models import Adventure,Booking, BookingLine, Event, PriceSchedule
 from app import forms
 from django.http import JsonResponse
 from app.serializers import EventSerializer
@@ -8,7 +8,7 @@ import os
 from rest_framework import viewsets
 import datetime
 import calendar
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 
 class Home(TemplateView):
     template_name = os.path.join('app', 'home.html')
@@ -50,9 +50,22 @@ class BookingCreate(CreateView):
             "adventure":self.kwargs["pk"] 
         }
 
+    def form_valid(self, form):
+        resp =  super().form_valid(form)
+
+        for line in self.request.session['booking']:
+            BookingLine.objects.create(
+                booking=self.object,
+                adventure=Adventure.objects.get(pk=line['adventure']),
+                number_of_participants=line['participants']
+            )
+        self.request.session['booking'] = []
+        return resp
+
+
 class BookingDetail(DetailView):
     model = Booking
-    template_name = os.path.join('app', 'booking-details.html')
+    template_name = os.path.join('app', 'booking_details.html')
 
 class EventDetail(DetailView):
     model = Event
@@ -88,3 +101,18 @@ def get_events(request, year=None, month=None):
         'date': evt.date,
         'title': evt.title
     } for evt in events], safe=False)
+
+
+def add_to_booking(request):
+    booking = request.session.get('booking', [])
+    booking.append({
+        'adventure': request.POST['adventure'],
+        'participants': request.POST['participants'],
+        'price': request.POST['price'],
+        'adventure_string': Adventure.objects.get(
+            pk=request.POST['adventure']).name
+    })
+    request.session['booking'] = booking
+    request.session['total'] = sum([float(i['price']) for i in booking])
+    # print(request.session['booking'])
+    return HttpResponse('')

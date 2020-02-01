@@ -23,14 +23,20 @@
                     <p>
                         {{object.description | linebreaks}}
                     </p>
-                    <div class='participant-widget'>
-                        <button onclick='increment()' class='btn primary'><i class="fa fa-plus" aria-hidden="true"></i></button>
-                        <div id='participant-count'>0</div>
-                        <button onclick='decrement()' class='btn primary '><i class="fa fa-minus" aria-hidden="true"></i></button>
+                    <div id='booking-widget'>
+                        <div class='participant-widget'>
+                            <button onclick='increment()' class='btn primary'><i class="fa fa-plus" aria-hidden="true"></i></button>
+                            <div id='participant-count'>0</div>
+                            <button onclick='decrement()' class='btn primary '><i class="fa fa-minus" aria-hidden="true"></i></button>
+                        </div>
+                        <h4>Price: $<span id='price'></span></h4>
+                        
+                        <button class=' btn primary btn-lg text-white' onclick='addToCart()'>Add to Cart</button>
                     </div>
-                    <h4>Price: $<span id='price'></span></h4>
+                    <p id='booking-string'></p>
                     <script>
                         var count = 0
+                        var price = 0
                         function increment(){
                             if(count < 10){
                                 count = count + 1
@@ -52,12 +58,34 @@
                                 'url':'/get-price/{{object.pk}}/' + count + '/'}).done( 
                                 function(data){
                                     $('#price').text(data.price)
+                                    price = data.price
                             })
                         }
 
+                        function addToCart(){
+                            $.ajax({
+                                method: 'POST',
+                                url: '/add-booking-line/',
+                                headers: { "X-CSRFToken": "{{ csrf_token }}" },
+                                data: {
+                                    adventure: "{{object.pk}}",
+                                    participants: count,
+                                    price: price
+                                }
+                            }).done(
+                                function(data){
+                                    $('#booking-widget').hide()
+                                    $('#booking-string').text(
+                                        "{{object}} for "+ count + 
+                                        " participants added to your booking.")
+                                }
+                            )
+                            
+                        }
+
                     </script>
-                    <a class=' btn primary btn-lg text-white'href="{% url 'app:create-booking' pk=object.pk%}">Add to Cart</a>
-                    <a class=' btn primary btn-lg text-white'href="{% url 'app:create-booking' pk=object.pk%}"> Book Now</a>
+                    
+                    <a class=' btn primary btn-lg text-white'href="{% url 'app:create-booking' pk=object.pk%}">View Booking</a>
                 </p>
             </div>
         </div>
