@@ -157,6 +157,7 @@ body {
 .footer-custom {
     background-color: #1d4d4f;
     color: #eeeeee;
+    padding-top:48px !important;
 
 }
 
@@ -416,30 +417,45 @@ body {
     text-align: center;
 }
 
+.testimonial {
+    color: #155E63;
+    background-color: #eee;
+    padding: 16px;
+    box-shadow: 0px 2px 4px #155e63,
+                    0px 4px 16px #ccc;
+    border-radius:  8px;
+}
+
 @media(min-width:800px) {
     .about-text p {
         max-width: 50%;
         width: 50%;
     }
 
-    .testimonial {
-        max-width: 50%;
-        color: #155E63;
-        background-color: #eee;
-        margin: 2rem auto;
-        padding: 2rem;
-        border: 2px solid #155e63;
-        border-radius: 2rem 5px 0px 5px;
+    .wide-testimonials {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
+    #testimonials {
+        display: none;
+    }
+
+    .testimonial {
+        flex: 1;
+        width: 284px;
+        margin:24px;
+    }
+
 }
 @media(max-width:799px){
+    .wide-testimonials {
+        display: none;
+    }
+
     .testimonial {
-        color: #155E63;
-        background-color: #eee;
-        margin: 2rem auto;
-        padding: 2rem;
-        border: 2px solid #155e63;
-        border-radius: 2rem 5px 0px 5px;
+        margin: 16px auto;
     }
 }
 
@@ -553,4 +569,47 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#scaling-carousel {
+    height: 30vh;
+    overflow:hidden;
+    position: relative;
+}
+
+
+#scaling-carousel div{
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width:100vw !important;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+}
+
+#scaling-carousel img {
+    display:none;
+    z-index: 1;
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height:auto;
+    animation: scaling-img 5s ease-out;
+}
+
+.scaling-carousel-active {
+    display:block !important;
+}
+
+
+@keyframes scaling-img{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform:scale(1.5)
+    }
 }

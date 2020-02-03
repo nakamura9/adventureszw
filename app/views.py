@@ -45,10 +45,6 @@ class BookingCreate(CreateView):
     template_name = os.path.join('app' , 'booking_create.html')
     form_class = forms.BookingForm
 
-    def get_initial(self):
-        return {
-            "adventure":self.kwargs["pk"] 
-        }
 
     def form_valid(self, form):
         resp =  super().form_valid(form)

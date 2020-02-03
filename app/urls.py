@@ -27,7 +27,7 @@ urlpatterns = [
     path('relax/', views.Relax.as_view(), name='relax'),
     path('adventure/<int:pk>', views.AdventureDetail.as_view(), 
         name='bookings'),
-    path('create-booking/<int:pk>', views.BookingCreate.as_view(),
+    path('create-booking/', views.BookingCreate.as_view(),
         name='create-booking')
     ,
     path('get-price/<int:adventure>/<int:participants>/', views.get_price,

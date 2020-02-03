@@ -140,5 +140,6 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 # This should already be in your settings.py
 django_heroku.settings(locals())
 # This is new
-del DATABASES['default']['OPTIONS']['sslmode']
+if DATABASES['default'].get('OPTIONS', None):
+    del DATABASES['default']['OPTIONS']['sslmode']
 
